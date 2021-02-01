@@ -18,16 +18,16 @@
                         <h6 class="text-white">How To Use TinyMCE Editor In Laravel ? - NiceSnippets.com</h6>
                     </div>
                     <div class="card-body">
-                        <form class="image-upload" method="post" action="{{ route('books.store') }}" enctype="multipart/form-data">
+                        <form class="image-upload" method="post" action="/books" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Name</label>
                                 <input type="text" name="name" class="form-control"/>
-                            </div>  
+                            </div>
                             <div class="form-group">
                                 <label>Description</label>
                                 <textarea name="description" rows="5" cols="40" class="form-control tinymce-editor"></textarea>
-                            </div>  
+                            </div>
                             <div class="form-group">
                                 <label>Author Name</label>
                                 <input type="text" name="author_name" class="form-control"/>
@@ -43,7 +43,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>  
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script type="text/javascript">
 tinymce.init({
             selector: 'textarea.tinymce-editor',

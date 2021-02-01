@@ -29,4 +29,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::get('/book/{$id}', [BookController::class, 'show'])->middleware('auth');
+Route::get('/books/{id}', [BookController::class, 'show']);
+Route::get('/books', [BookController::class, 'index']);
+Route::post('/books', [BookController::class, 'store']);

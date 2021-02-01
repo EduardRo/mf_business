@@ -10,9 +10,9 @@ class BookController extends Controller
     public function index()
     {
         //return view('app');
-        //return 'sunt in controller';
-
         return view('book.create');
+
+        // return view('book.test');
     }
 
     public function store(Request $request)
@@ -27,9 +27,9 @@ class BookController extends Controller
         $book = Book::all()->find($id);
         $blabbla = 'aceasta este o alta variabila';
         //dd($book);
-        //return view('book.show', compact('book'), ['testvariable' => 'testvariable', 'secondtestvariable' => $blabbla]);
+        return view('book.show', compact('book'), ['testvariable' => 'testvariable', 'secondtestvariable' => $blabbla]);
         //return view('book.show', compact('book'));
-        return 'bla bla';
+        //return $id;
     }
 
     public static function test($test)
