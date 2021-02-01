@@ -14,10 +14,14 @@
             </div>
             <div class="col-md-6 offset-3 mt-5">
                 <div class="card">
+                    {{$secondtestvariable}} 
+                    {{-- cum se appeleaza of function din controller in view --}}
+                    {{App\Http\Controllers\BookController::test($secondtestvariable)}}
                     <div class="card-header bg-info">
                         <h6 class="text-white">How To Use TinyMCE Editor In Laravel ? - NiceSnippets.com</h6>
                     </div>
                     <div class="card-body">
+                        {{$testvariable}}
                         <table class="table table-bordered">
                             <tr>
                                 <th>No.</th>

@@ -22,8 +22,14 @@ class BookController extends Controller
     public function show($id)
     {
         $book = Book::all()->find($id);
+        $blabbla = 'aceasta este o alta variabila';
         //dd($book);
-        return view('book.show', compact('book'));
+        return view('book.show', compact('book'), ['testvariable' => 'testvariable', 'secondtestvariable' => $blabbla]);
         //return view('book.show', compact('book'));
+    }
+
+    public static function test($test)
+    {
+        return 'test' . $test;
     }
 }
