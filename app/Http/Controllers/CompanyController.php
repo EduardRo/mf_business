@@ -16,7 +16,7 @@ class CompanyController extends Controller
     {
 
         $companies = Company::All();
-        return $companies;
+        return view('layout.show_companies', ['companies' => $companies]);
     }
 
     /**
@@ -26,7 +26,9 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        // Aduce forma in care se salveaza datele companiei
+        //return 'controller';
+        return view('company.createCompany');
     }
 
     /**
