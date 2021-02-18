@@ -11,7 +11,7 @@
 
 </head>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="/logomarketingfocus.png" width="270" height="50" alt="">
           </a>
@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         @auth
-
+        @endauth
 
 
 
@@ -31,15 +31,15 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Introducere date
         </a>
-        <div class="dropdown-menu bg-primary text-light" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item bg-primary text-light" href="#">Date Firma</a>
-          <a class="dropdown-item bg-primary text-light" href="#">Prezentare Firma</a>
+          <a class="dropdown-item bg-primary text-light" href="/companies/create/">Prezentare Firma</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item bg-primary text-light" href="#">Comunicate De Presa</a>
           <a class="dropdown-item bg-primary text-light" href="#">Job-uri</a>
         </div>
       </li>
-      @endauth
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Vizualizare

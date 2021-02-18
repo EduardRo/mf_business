@@ -28,7 +28,14 @@ class CompanyController extends Controller
     {
         // Aduce forma in care se salveaza datele companiei
         //return 'controller';
-        return view('company.createCompany');
+        return view('company.prezentareCompanie');
+    }
+
+    public function introducereDateCompanie()
+    {
+        // Aduce forma in care se salveaza datele companiei
+        //return 'controller';
+        return view('company.dateCompanie');
     }
 
     /**
@@ -41,6 +48,8 @@ class CompanyController extends Controller
     {
         //
     }
+
+
 
     /**
      * Display the specified resource.
