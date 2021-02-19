@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompanyPressRelease extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    protected $fillable =['company_id', 'title', 'text', 'enabled'];
 }
