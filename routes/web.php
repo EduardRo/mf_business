@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CompanyPresentationController;
+use App\Http\Controllers\CompanyPressReleaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,4 @@ Route::get('/companies', [CompanyController::class, 'index']);
 Route::get('/companies/create/', [CompanyController::class, 'create']);
 Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/companypresentations', [CompanypresentationController::class, 'index']);
+Route::get('/pressreleases', [CompanyPressreleaseController::class, 'index']);
