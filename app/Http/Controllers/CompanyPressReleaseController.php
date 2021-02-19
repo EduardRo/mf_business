@@ -13,4 +13,10 @@ class CompanyPressReleaseController extends Controller
         $press = CompanyPressRelease::all();
         return $press;
     }
+
+    public function show($id)
+    {
+        $pressrelease = CompanyPressRelease::find($id);
+        return $pressrelease;
+    }
 }
