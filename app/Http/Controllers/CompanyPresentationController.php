@@ -20,4 +20,12 @@ class CompanyPresentationController extends Controller
         $companies = CompanyPresentation::All();
         return view('company.presentationsCompanie', ['companies' => $companies, 'userid' => $userid, 'name' => $name]);
     }
+
+    public function create(){
+
+    }
+
+    public function store(){
+        
+    }
 }
