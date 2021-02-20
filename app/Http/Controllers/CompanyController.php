@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use Illuminate\Http\Request;
+use App\Http\Helpers\CustomAvatar;
+
 
 class CompanyController extends Controller
 {
@@ -13,10 +15,11 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-
+    {   
+        $customAvatar=new CustomAvatar();
+        $defaultAvatar = $customAvatar->make_custom_avatar('bla blab bla');
         $companies = Company::All();
-        return view('layout.show_companies', ['companies' => $companies]);
+        return view('layout.show_companies', ['companies' => $companies, 'com'=>$defaultAvatar]);
     }
 
     /**
