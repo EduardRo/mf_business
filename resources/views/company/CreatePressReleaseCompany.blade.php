@@ -3,7 +3,7 @@
 
 
     <head>
-        <title>How To Use TinyMCE Editor In Laravel ? - NiceSnippets.com</title>
+        <title>Comunicat de Presa</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -21,26 +21,29 @@
                 <div class="col-md-6 offset-3 mt-5">
                     <div class="card">
                         <div class="card-header bg-info">
-                            <h6 class="text-white">How To Use TinyMCE Editor In Laravel ? - NiceSnippets.com</h6>
+                            <h6 class="text-white">Comunicat de presa nou</h6>
                         </div>
                         <div class="card-body">
-                            <form class="image-upload" method="post" action="/books" enctype="multipart/form-data">
+                            <form class="image-upload" method="post" action="/pressrelease/create" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" name="name" class="form-control" />
+                                    <label>title</label>
+                                    <input type="text" name="title" class="form-control" />
                                 </div>
+                                
                                 <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea name="description" rows="5" cols="40"
+                                    <label>Continut</label>
+                                    <textarea name="text" rows="15" cols="40"
                                         class="form-control tinymce-editor"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label>Author Name</label>
-                                    <input type="text" name="author_name" class="form-control" />
-                                </div>
+                                
                                 <div class="form-group text-center">
-                                    <button type="submit" class="btn btn-success btn-sm">Save</button>
+                                    <button type="submit" class="btn btn-primary btn-lg">Salveaza</button>
+                                </div>
+
+                                <div class="form-group">
+                                    
+                                    <input type="text" value={{$company_id}} name="company_id" class="form-control" hidden/>
                                 </div>
                             </form>
                         </div>

@@ -8,6 +8,15 @@ class clsCompany{
         // do your operation here
         return $avatar . $default_avatar;
     }
-}
 
-?>
+    public function retrieveCompanyId($userId){
+
+        return 33;
+        $companies = Company::all()->find($userId);
+        
+        
+        return $companies;
+
+        
+    }
+}
