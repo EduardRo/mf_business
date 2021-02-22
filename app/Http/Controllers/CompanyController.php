@@ -49,7 +49,10 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Save the data
+        $input = $request->all();
+        Company::create($input);
+        return redirect()->back();
     }
 
 

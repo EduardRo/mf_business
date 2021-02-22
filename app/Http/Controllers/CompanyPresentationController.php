@@ -25,7 +25,12 @@ class CompanyPresentationController extends Controller
 
     }
 
-    public function store(){
+    public function store(Request $request){
+        // Save the data
+        $input = $request->all();
+        CompanyPresentation::create($input);
+        return redirect()->back();
+
         
     }
 
