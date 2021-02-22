@@ -28,4 +28,10 @@ class CompanyPresentationController extends Controller
     public function store(){
         
     }
+
+    public function show($id)
+    {
+        
+    }
+
 }

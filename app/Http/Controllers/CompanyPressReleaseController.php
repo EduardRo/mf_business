@@ -19,4 +19,15 @@ class CompanyPressReleaseController extends Controller
         $pressrelease = CompanyPressRelease::find($id);
         return $pressrelease;
     }
+
+    public function create(){
+
+        
+
+
+    }
+
+    public function store(){
+
+    }
 }

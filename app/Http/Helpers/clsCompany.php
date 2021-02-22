@@ -1,9 +1,9 @@
 <?php
 namespace App\Http\Helpers;
-class CustomAvatar{
+class clsCompany{
     
 
-    public function make_custom_avatar($avatar){
+    public function make_custom_avatar( $avatar=null){
         $default_avatar='avatar.png';
         // do your operation here
         return $avatar . $default_avatar;
