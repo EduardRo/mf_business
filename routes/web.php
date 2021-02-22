@@ -7,6 +7,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CompanyPresentationController;
 use App\Http\Controllers\CompanyPressReleaseController;
+use App\Models\CompanyPressRelease;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +36,19 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/books/{id}', [BookController::class, 'show']);
 Route::get('/books', [BookController::class, 'index']);
 Route::post('/books', [BookController::class, 'store']);
+// Company
 
 Route::get('/companies', [CompanyController::class, 'index']);
 Route::get('/companies/create/', [CompanyController::class, 'create']);
 Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
+
+// companyPresentations
 Route::get('/companypresentations', [CompanypresentationController::class, 'index']);
+
+
+// pressReleases
 Route::get('/pressreleases', [CompanyPressreleaseController::class, 'index']);
-Route::get('/pressrelease/{id}', [CompanyPressreleaseController::class, 'show']);
+Route::get('/pressrelease/create', [CompanyPressReleaseController::class, 'create']);
+Route::get('/pressrelease/{id}', [CompanyPressReleaseController::class, 'show']);
+Route::post('/pressrelease/create',[CompanyPressReleaseController::class, 'store']);
+

@@ -21,22 +21,19 @@ class CompanyPresentationController extends Controller
         return view('company.presentationsCompanie', ['companies' => $companies, 'userid' => $userid, 'name' => $name]);
     }
 
-    public function create(){
-
+    public function create()
+    {
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         // Save the data
         $input = $request->all();
         CompanyPresentation::create($input);
         return redirect()->back();
-
-        
     }
 
     public function show($id)
     {
-        
     }
-
 }

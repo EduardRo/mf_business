@@ -20,14 +20,14 @@ class CompanyPressReleaseController extends Controller
         return $pressrelease;
     }
 
-    public function create(){
+    public function create()
+    {
 
-        
-
-
+        return  view('company.CreatePressReleaseCompany');
     }
 
-    public function store(){
-
+    public function store()
+    {
+        return 'I am in store';
     }
 }

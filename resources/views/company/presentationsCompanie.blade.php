@@ -1,12 +1,11 @@
-
-   @extends('layout.menu')
-   @section('content')
+@extends('layout.menu')
+@section('content')
 
     <div class="container">
-        {{$companies}}
+        {{ $companies }}
 
-<h1>{{$name}}</h1>
-<h1>{{$userid}}</h1>
+        <h1>{{ $name }}</h1>
+        <h1>{{ $userid }}</h1>
 
     </div>
 
