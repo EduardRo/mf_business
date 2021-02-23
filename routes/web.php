@@ -39,7 +39,8 @@ Route::post('/books', [BookController::class, 'store']);
 // Company
 
 Route::get('/companies', [CompanyController::class, 'index']);
-Route::get('/companies/create/', [CompanyController::class, 'create']);
+Route::get('/companies/create', [CompanyController::class, 'create']);
+Route::post('/companies/store', [CompanyController::class, 'store']);
 Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
 
 // companyPresentations

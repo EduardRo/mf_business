@@ -17,18 +17,16 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('company_name');
-            $table->text('company_description');
-            $table->text('company_services');
-            $table->text('company_clients');
-            $table->text('company_management_team');
+            $table->string('company_regcom');
+            $table->string('company_fiscalcode');
+            $table->string('company_capital');
+            $table->string('company_city');
             $table->text('company_address');
-            $table->text('company_contact');
-
-
-
-
-
-
+            $table->string('company_contact');
+            $table->string('company_email');
+            $table->string('company_phone');
+            $table->string('company_bank');
+            $table->String('company_bank_account');
             $table->timestamps();
         });
     }
