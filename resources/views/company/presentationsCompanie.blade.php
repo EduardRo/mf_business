@@ -42,8 +42,11 @@
                             <label>Contact:</label>
                             <textarea name="company_contact" rows="5" cols="40" class="form-control tinymce-editor"></textarea>
                         </div>
-                      
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Salveaza</button>
+                        </div>
                     </form>
+                    
                 </div>
             </div>
         </div>

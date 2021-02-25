@@ -19,7 +19,7 @@ use App\Models\CompanyPressRelease;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -28,14 +28,21 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+*/
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
-
+/*
 Route::get('/books/{id}', [BookController::class, 'show']);
 Route::get('/books', [BookController::class, 'index']);
 Route::post('/books', [BookController::class, 'store']);
+*/
+// Home page
+
+Route::get('/', function(){
+    return view('home');
+});
+
 // Company
 
 Route::get('/companies', [CompanyController::class, 'index']);
@@ -49,8 +56,9 @@ Route::get('/companypresentations/create', [CompanyPresentationController::class
 
 
 // pressReleases
-Route::get('/pressreleases', [CompanyPressreleaseController::class, 'index']);
+Route::get('/pressrelease', [CompanyPressreleaseController::class, 'index']);
 Route::get('/pressrelease/create', [CompanyPressReleaseController::class, 'create']);
 Route::get('/pressrelease/{id}', [CompanyPressReleaseController::class, 'show']);
 Route::post('/pressrelease/store',[CompanyPressReleaseController::class, 'store']);
 
+// jobs

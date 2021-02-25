@@ -15,6 +15,7 @@ class CompanyPressReleaseController extends Controller
     {
         $press = CompanyPressRelease::all();
         return $press;
+        //return 'press controller';
     }
 
     public function show($id)
