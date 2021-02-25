@@ -24,15 +24,16 @@
                             <h6 class="text-white">Comunicat de presa nou</h6>
                         </div>
                         <div class="card-body">
-                            <form class="image-upload" method="post" action="/pressrelease/create" enctype="multipart/form-data">
+                            <form class="image-upload" method="post" action="/pressrelease/store" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label>Company Id</label>
-                                    <input type="text" name="company_id" class="form-control" />
+                                    
+                                    <label>Company Id: {{$company_id}}</label>
+                                    <input type="text" value={{$company_id}} name="title" class="form-control" hidden/>
                                 </div>
                                 <div class="form-group">
-                                    <label>Company Id: {{company_id}}</label>
-                                    <label>Company_name: {{company_name}} </label>
+                                    
+                                    <label>Company_name: {{$company_name}} </label>
                                 </div>
                                 <div class="form-group">
                                     <label>title</label>
