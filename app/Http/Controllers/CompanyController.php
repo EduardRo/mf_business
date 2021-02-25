@@ -31,7 +31,12 @@ class CompanyController extends Controller
     {
         // Aduce forma in care se salveaza datele companiei
         //return 'controller';
-        return view('company.prezentareCompanie');
+
+
+        
+        
+        $currentUser = auth()->id();
+        return view('company.dateCompanie', ['currentUser'=>$currentUser]);
     }
 
     public function introducereDateCompanie()

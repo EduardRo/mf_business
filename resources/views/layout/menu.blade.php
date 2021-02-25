@@ -32,8 +32,8 @@
           Introducere date
         </a>
         <div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item bg-primary text-light" href="#">Date Firma</a>
-          <a class="dropdown-item bg-primary text-light" href="/companies/create/">Prezentare Firma</a>
+          <a class="dropdown-item bg-primary text-light" href="/companies/create">Date Firma</a>
+          <a class="dropdown-item bg-primary text-light" href="/companypresentations/create">Prezentare Firma</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item bg-primary text-light" href="#">Comunicate De Presa</a>
           <a class="dropdown-item bg-primary text-light" href="#">Job-uri</a>
@@ -45,7 +45,7 @@
           Vizualizare
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Date Firma</a>
+          <a class="dropdown-item" href="/companies/`${id}`">Date Firma</a>
           <a class="dropdown-item" href="#">Prezentare</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Comunicate De Presa</a>
