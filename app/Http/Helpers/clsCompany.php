@@ -1,22 +1,30 @@
 <?php
-namespace App\Http\Helpers;
-class clsCompany{
-    
 
-    public function make_custom_avatar( $avatar=null){
-        $default_avatar='avatar.png';
+namespace App\Http\Helpers;
+
+use App\Models\Company;
+
+class ClsCompany
+{
+
+
+    public function make_custom_avatar($avatar = null)
+    {
+        $default_avatar = 'avatar.png';
         // do your operation here
         return $avatar . $default_avatar;
     }
 
-    public function retrieveCompanyId($userId){
+    public function retrieveCompanyId($userId)
+    {
 
-        return 33;
-        $companies = Company::all()->find($userId);
-        
-        
-        return $companies;
 
-        
+        $company = Company::all()->where('user_id',$userId)->first();
+
+
+        return $company;
+
+        //return 'sunt in clasa clsCompanies in retrieveCompanyId';
     }
 }
+?>

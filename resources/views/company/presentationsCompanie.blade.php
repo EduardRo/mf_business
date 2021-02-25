@@ -15,56 +15,34 @@
                     <form class="image-upload" method="post" action="/companies/store" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            
-                            <input name="user_id" value={{$currentUser}} rows="15" cols="40" class="form-control" hidden/>
+                            <label>ID:</label>
+                            <input name="company_id"  value={{$company_id}} rows="15" cols="40" class="form-control" disabled/>
                         </div>
                         <div class="form-group">
                             <label>Nume Companie:</label>
-                            <input name="company_name" rows="15" cols="40" class="form-control"/>
+                            <input name="company_name"  value={{$company_name}} rows="15" cols="40" class="form-control" disabled/>
                         </div>
                         <div class="form-group">
-                            <label>Registrul Comertului:</label>
-                            <input name="company_regcom" rows="15" cols="40" class="form-control"/>
+                            <label>Descriere:</label>
+                            <textarea name="company_description" rows="15" cols="40" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Cod Fiscal:</label>
-                            <input name="company_fiscalcode" rows="15" cols="40" class="form-control"/>
+                            <label>Servicii:</label>
+                            <textarea name="company_services" rows="15" cols="40" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Capital:</label>
-                            <input name="company_capital" value="10000" rows="15" cols="40" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Localitate:</label>
-                            <input name="company_city" rows="15" cols="40" class="form-control"/>
+                            <label>Management:</label>
+                            <textarea name="company_management_team" value="10000" rows="15" cols="40" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Adresa:</label>
-                            <textarea name="company_address" rows="5" cols="40" class="form-control tinymce-editor"></textarea>
+                            <textarea name="company_address" rows="15" cols="40" class="form-control"/></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Persoana Contact</label>
-                            <input name="company_contact" rows="5" cols="40" class="form-control" />
+                            <label>Contact:</label>
+                            <textarea name="company_contact" rows="5" cols="40" class="form-control tinymce-editor"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label>Email:</label>
-                            <input type="email" name="company_email" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefon:</label>
-                            <input type="text" name="company_phone" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Nume Banca</label>
-                            <input type="text" name="company_bank" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>IBAN</label>
-                            <input type="text" name="company_bank_account" class="form-control"/>
-                        </div>
-                        <div class="form-group text-center">
-                            <button type="submit" class="btn btn-danger btn-sm">Salveaza</button>
-                        </div>
+                      
                     </form>
                 </div>
             </div>

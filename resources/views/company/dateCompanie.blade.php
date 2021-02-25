@@ -31,10 +31,7 @@
                                 <label>Cod Fiscal:</label>
                                 <input name="company_fiscalcode" rows="15" cols="40" class="form-control"/>
                             </div>
-                            <div class="form-group">
-                                <label>Capital:</label>
-                                <input name="company_capital" value="10000" rows="15" cols="40" class="form-control"/>
-                            </div>
+                            
                             <div class="form-group">
                                 <label>Localitate:</label>
                                 <input name="company_city" rows="15" cols="40" class="form-control"/>

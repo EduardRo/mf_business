@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use Illuminate\Http\Request;
-use App\Http\Helpers\clsCompany;
+use App\Http\Helpers\ClsCompany;
+//use App\Http\Helpers\CustomAvatar;
 
 
 class CompanyController extends Controller
@@ -16,10 +17,18 @@ class CompanyController extends Controller
      */
     public function index()
     {   
-        $customAvatar=new clsCompany();
-        $defaultAvatar = $customAvatar->make_custom_avatar();
-        $companies = Company::All();
-        return view('layout.show_companies', ['companies' => $companies, 'com'=>$defaultAvatar]);
+        $customCompany=new ClsCompany();
+        $userId=auth()->id();
+        
+        $company = $customCompany->retrieveCompanyId($userId);
+        
+        //dd($defaultAvatar);
+        //return view('layout.show_companies', ['companies' => $companies, 'com'=>$defaultAvatar]);
+
+
+        
+        //$defaultAvatar = $customAvatar->default_avatar;
+        return $company;
     }
 
     /**

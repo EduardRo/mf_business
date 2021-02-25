@@ -44,7 +44,8 @@ Route::post('/companies/store', [CompanyController::class, 'store']);
 Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
 
 // companyPresentations
-Route::get('/companypresentations', [CompanypresentationController::class, 'index']);
+Route::get('/companypresentations', [CompanyPresentationController::class, 'index']);
+Route::get('/companypresentations/create', [CompanyPresentationController::class, 'create']);
 
 
 // pressReleases
