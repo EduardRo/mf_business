@@ -16,19 +16,11 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $customCompany=new ClsCompany();
-        $userId=auth()->id();
-        
+    {
+        $customCompany = new ClsCompany();
+        $userId = auth()->id();
         $company = $customCompany->retrieveCompanyId($userId);
-        
-        //dd($defaultAvatar);
-        //return view('layout.show_companies', ['companies' => $companies, 'com'=>$defaultAvatar]);
-
-
-        
-        //$defaultAvatar = $customAvatar->default_avatar;
-        return $company;
+        return view('company.Company', ['company' => $company]);
     }
 
     /**
@@ -42,10 +34,10 @@ class CompanyController extends Controller
         //return 'controller';
 
 
-        
-        
+
+
         $currentUser = auth()->id();
-        return view('company.createCompany', ['currentUser'=>$currentUser]);
+        return view('company.createCompany', ['currentUser' => $currentUser]);
     }
 
     public function introducereDateCompanie()

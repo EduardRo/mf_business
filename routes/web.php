@@ -46,25 +46,25 @@ Route::get('/', function(){
 
 // Company
 
-Route::get('/companies', [CompanyController::class, 'index']);
+Route::get('/company', [CompanyController::class, 'index']);
 Route::get('/company/create', [CompanyController::class, 'create']);
 Route::post('/companies/store', [CompanyController::class, 'store']);
 Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
 
 // companyPresentations
-Route::get('/companypresentations', [CompanyPresentationController::class, 'index']);
+Route::get('/companypresentation', [CompanyPresentationController::class, 'index']);
 Route::get('/companypresentation/create', [CompanyPresentationController::class, 'create']);
 Route::post('/companypresentation/store',[CompanyController::class, 'store']);
 
 
 // pressReleases
-Route::get('/pressrelease', [CompanyPressreleaseController::class, 'index']);
+Route::get('/pressreleases', [CompanyPressreleaseController::class, 'index']);
 Route::get('/pressrelease/create', [CompanyPressReleaseController::class, 'create']);
-Route::get('/pressrelease/{id}', [CompanyPressReleaseController::class, 'show']);
+Route::get('/pressreleases/{id}', [CompanyPressReleaseController::class, 'show']);
 Route::post('/pressrelease/store',[CompanyPressReleaseController::class, 'store']);
 
 // jobs
-Route::get('/job', [CompanyJobController::class, 'index']);
+Route::get('/jobs', [CompanyJobController::class, 'index']);
 Route::get('/job/create', [CompanyJobController::class, 'create']);
-Route::get('/job/{id}', [CompanyJobController::class, 'show']);
+Route::get('/jobs/{id}', [CompanyJobController::class, 'show']);
 Route::post('/job/store',[CompanyJobController::class, 'store']);

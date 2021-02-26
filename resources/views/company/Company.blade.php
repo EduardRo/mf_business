@@ -10,16 +10,12 @@
             <div class="col-md-12 mt-5">
                 <div class="card">
                     <div class="card-header bg-info">
-                        <h6 class="text-white">Introduceti datele companiei</h6>
+                        <h6 class="text-white">{{$company->company_name}}</h6>
                     </div>
                     <div class="card-body">
-                        <form class="image-upload" method="post" action="/companies/save" enctype="multipart/form-data">
-                            @csrf
-                            <div class="form-group">
-                                <label>Denumire societate</label>
-                                <input type="text" name="company_name" class="form-control"/>
-                            </div>
-                            <div class="form-group">
+                     
+                        
+                            <div>
                                 <label>Descriere</label>
                                 <textarea name="company_description" rows="15" cols="40" class="form-control tinymce-editor"></textarea>
                             </div>
@@ -46,7 +42,7 @@
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-danger btn-sm">Salveaza</button>
                             </div>
-                        </form>
+                     
                     </div>
                 </div>
             </div>
