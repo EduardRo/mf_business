@@ -12,7 +12,7 @@
                             <h6 class="text-white">Anunt Job</h6>
                         </div>
                         <div class="card-body">
-                            <form class="image-upload" method="post" action="/pressrelease/store"
+                            <form class="image-upload" method="post" action="/job/store"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">

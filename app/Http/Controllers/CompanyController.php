@@ -45,14 +45,14 @@ class CompanyController extends Controller
         
         
         $currentUser = auth()->id();
-        return view('company.dateCompanie', ['currentUser'=>$currentUser]);
+        return view('company.createCompany', ['currentUser'=>$currentUser]);
     }
 
     public function introducereDateCompanie()
     {
         // Aduce forma in care se salveaza datele companiei
         //return 'controller';
-        return view('company.dateCompanie');
+        return view('company.createCompany');
     }
 
     /**

@@ -17,10 +17,9 @@ class CompanyPresentationController extends Controller
      */
     public function index()
     {
-        $userid = Auth::user()->id;
-        $name = Auth::user()->name;
+        
         $companies = CompanyPresentation::All();
-        return view('company.presentationsCompanie', ['companies' => $companies, 'userid' => $userid, 'name' => $name]);
+        return $companies;
     }
 
     public function create()
@@ -34,7 +33,7 @@ class CompanyPresentationController extends Controller
        
    
         // return  $company_name;
-        return view('company.presentationsCompanie',['company_id'=>$company_id,'company_name'=>$company_name]);
+        return view('company.createPresentationsCompanie',['company_id'=>$company_id,'company_name'=>$company_name]);
     }
 
     public function store(Request $request)

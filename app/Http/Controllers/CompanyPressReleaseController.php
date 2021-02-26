@@ -33,7 +33,7 @@ class CompanyPressReleaseController extends Controller
         $company_id=$company->id;
         $company_name=$company->company_name;
         //return $company_id;
-        return  view('company.CreatePressReleaseCompany', ['company_id' => $company_id, 'company_name'=>$company_name]);
+        return  view('company.createPressReleaseCompany', ['company_id' => $company_id, 'company_name'=>$company_name]);
     }
 
     public function store(Request $request)

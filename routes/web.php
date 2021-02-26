@@ -47,13 +47,13 @@ Route::get('/', function(){
 // Company
 
 Route::get('/companies', [CompanyController::class, 'index']);
-Route::get('/companies/create', [CompanyController::class, 'create']);
+Route::get('/company/create', [CompanyController::class, 'create']);
 Route::post('/companies/store', [CompanyController::class, 'store']);
 Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
 
 // companyPresentations
 Route::get('/companypresentations', [CompanyPresentationController::class, 'index']);
-Route::get('/companypresentations/create', [CompanyPresentationController::class, 'create']);
+Route::get('/companypresentation/create', [CompanyPresentationController::class, 'create']);
 Route::post('/companypresentation/store',[CompanyController::class, 'store']);
 
 

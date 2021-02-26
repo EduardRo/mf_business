@@ -47,7 +47,7 @@ class CompanyJobController extends Controller
     public function store(Request $request)
     {
         //
-
+        $request->request->add(['enabled'=>false]);
     }
 
     /**
