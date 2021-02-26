@@ -32,7 +32,7 @@ class CompanyPressReleaseController extends Controller
         $company = $customCompany->retrieveCompanyId($userId);
         $company_id=$company->id;
         $company_name=$company->company_name;
-        //return $company;
+        //return $company_id;
         return  view('company.CreatePressReleaseCompany', ['company_id' => $company_id, 'company_name'=>$company_name]);
     }
 

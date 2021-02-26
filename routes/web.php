@@ -7,7 +7,8 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CompanyPresentationController;
 use App\Http\Controllers\CompanyPressReleaseController;
-use App\Models\CompanyPressRelease;
+use App\Http\Controllers\CompanyJobController;
+// use App\Models\CompanyPressRelease;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,7 @@ Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '
 // companyPresentations
 Route::get('/companypresentations', [CompanyPresentationController::class, 'index']);
 Route::get('/companypresentations/create', [CompanyPresentationController::class, 'create']);
+Route::post('/companypresentation/store',[CompanyController::class, 'store']);
 
 
 // pressReleases
@@ -62,3 +64,7 @@ Route::get('/pressrelease/{id}', [CompanyPressReleaseController::class, 'show'])
 Route::post('/pressrelease/store',[CompanyPressReleaseController::class, 'store']);
 
 // jobs
+Route::get('/job', [CompanyJobController::class, 'index']);
+Route::get('/job/create', [CompanyJobController::class, 'create']);
+Route::get('/job/{id}', [CompanyJobController::class, 'show']);
+Route::post('/job/store',[CompanyJobController::class, 'store']);
