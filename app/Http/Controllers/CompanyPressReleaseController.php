@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CompanyPressRelease;
-use App\Http\Helpers\clsCompany;
+use App\Http\Helpers\ClsCompany;
+use App\Http\Helpers\ClsPressReleases;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -13,9 +14,17 @@ class CompanyPressReleaseController extends Controller
     //
     public function index()
     {
-        $press = CompanyPressRelease::all();
-        return $press;
-        //return 'press controller';
+        $customCompany=new ClsCompany();
+        $userId=auth()->id();
+        
+        $company = $customCompany->retrieveCompanyId($userId);
+        $company_id=$company->id;
+        $company_name=$company->company_name;
+
+        // class clsPressReleases
+        $clsPressReleases = new ClsPressReleases;
+        $companyPressReleases = $clsPressReleases->pressReleases($company_id);
+        return view('company.PressReleases',['companyname'=>$company_name,'companypressreleases'=>$companyPressReleases]);
     }
 
     public function show($id)
