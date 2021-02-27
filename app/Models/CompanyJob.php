@@ -18,6 +18,7 @@ class CompanyJob extends Model
        'job_skills',
        'job_things_nice_to_have',
        'job_offer',
+       'enabled',
        'email',
        'phone',
        
