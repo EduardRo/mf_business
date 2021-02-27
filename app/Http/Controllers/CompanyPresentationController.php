@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Helpers\ClsCompany;
+use App\Http\Helpers\ClsPresentation;
 
 use App\Models\CompanyPresentation;
 use Illuminate\Http\Request;
@@ -17,9 +18,18 @@ class CompanyPresentationController extends Controller
      */
     public function index()
     {
-
-        $companies = CompanyPresentation::All();
-        return $companies;
+        $customCompany=new ClsCompany();
+        $userId=auth()->id();
+        
+        $company = $customCompany->retrieveCompanyId($userId);
+        $company_id=$company->id;
+        $company_name=$company->company_name;
+        $clsPresentation = new ClsPresentation();
+        $presentation=$clsPresentation->presentationByCompanyId($company_id);
+        //return $companyJobs;
+        return view('company.Presentation',['presentation'=>$presentation]);
+        //return $company_name;
+        //return $presentation;
     }
 
     public function create()

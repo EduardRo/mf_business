@@ -4,12 +4,12 @@ namespace App\Http\Helpers;
 use App\Models\CompanyPresentation;
 
 
-class ClsJobs
+class ClsPresentation
 {
     public function presentationByCompanyId($companyId)
     {
-        $alljobs = CompanyPresentation::all()->where('company_id', $companyId);
-        return $alljobs;
+        $presentation = CompanyPresentation::all()->where('company_id', $companyId)->first();
+        return $presentation;
     }
 
     public function presentationById($id){
