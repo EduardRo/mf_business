@@ -54,7 +54,7 @@ Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '
 // companyPresentations
 Route::get('/companypresentation', [CompanyPresentationController::class, 'index']);
 Route::get('/companypresentation/create', [CompanyPresentationController::class, 'create']);
-Route::post('/companypresentation/store',[CompanyController::class, 'store']);
+Route::post('/companypresentation/store',[CompanyPresentationController::class, 'store']);
 
 
 // pressReleases
@@ -66,5 +66,6 @@ Route::post('/pressrelease/store',[CompanyPressReleaseController::class, 'store'
 // jobs
 Route::get('/jobs', [CompanyJobController::class, 'index']);
 Route::get('/job/create', [CompanyJobController::class, 'create']);
-Route::get('/jobs/{id}', [CompanyJobController::class, 'show']);
+
 Route::post('/job/store',[CompanyJobController::class, 'store']);
+Route::get('/jobs/{id}', [CompanyJobController::class, 'show']);

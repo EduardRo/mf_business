@@ -84,8 +84,8 @@ class CompanyJobController extends Controller
         $clsJobs = new ClsJobs;
         $Job = $clsJobs->jobById($id);
         //return $companyJobs;
-        //return view('company.Jobs',['companyname'=>$company_name,'job'=>$Job]);
-        return  $Job;
+        return view('company.Job',['companyname'=>$company_name,'job'=>$Job]);
+        //return  $Job;
     }
 
     /**

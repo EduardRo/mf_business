@@ -45,11 +45,11 @@
           Vizualizare
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/companies/`${id}`">Date Firma</a>
-          <a class="dropdown-item" href="#">Prezentare</a>
+          <a class="dropdown-item" href="/company">Date Firma</a>
+          <a class="dropdown-item" href="/companypresentation">Prezentare</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Comunicate De Presa</a>
-          <a class="dropdown-item" href="#">Job-uri</a>
+          <a class="dropdown-item" href="/pressreleases">Comunicate De Presa</a>
+          <a class="dropdown-item" href="/jobs">Job-uri</a>
         </div>
       </li>
 
