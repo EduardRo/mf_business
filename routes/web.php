@@ -30,8 +30,11 @@ Route::get('/', function () {
     ]);
 });
 */
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+
     return Inertia::render('Dashboard');
+    
 })->name('dashboard');
 /*
 Route::get('/books/{id}', [BookController::class, 'show']);
@@ -43,19 +46,28 @@ Route::post('/books', [BookController::class, 'store']);
 Route::get('/', function(){
     return view('home');
 });
+/*
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
 
+    //return Inertia::render('Dashboard');
+    view('home');
+});
+*/
 // Company
 
 Route::get('/company', [CompanyController::class, 'index']);
 Route::get('/company/create', [CompanyController::class, 'create']);
-Route::post('/companies/store', [CompanyController::class, 'store']);
-Route::get('/companies/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
+Route::post('/company/store', [CompanyController::class, 'store']);
+Route::get('/company/{id}', [CompanyController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/company/edit',[CompanyController::class, 'edit']);
+Route::post('/company/update',[CompanyController::class, 'update']);
 
 // companyPresentations
 Route::get('/companypresentation', [CompanyPresentationController::class, 'index']);
 Route::get('/companypresentation/create', [CompanyPresentationController::class, 'create']);
 Route::post('/companypresentation/store',[CompanyPresentationController::class, 'store']);
-
+Route::get('/companypresentation/edit',[CompanyPresentationController::class, 'edit']);
+Route::post('/companypresentation/update',[CompanyPresentationController::class, 'update']);
 
 // pressReleases
 Route::get('/pressreleases', [CompanyPressreleaseController::class, 'index']);

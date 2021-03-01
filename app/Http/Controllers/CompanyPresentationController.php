@@ -62,12 +62,39 @@ class CompanyPresentationController extends Controller
     {
     }
 
-    public function edit($id){
+    public function edit(){
         // daca se incearca crearea si exista atunci se editeaza si se cheama functia update
+        // the form to edit the company data
+        $clsCompany = new ClsCompany();
+        $userId = auth()->id();
+        $company = $clsCompany->retrieveCompanyId($userId);
+        $companyId= $company->id;
+        $clsPresentation = new ClsPresentation();
+        $presentation = $clsPresentation->presentationByCompanyId($companyId);
+        //return $presentation;
+        return view('company.editCompanyPresentation', ['presentation'=>$presentation, 'presentation_id'=>$presentation->id]);
 
     }
 
-    public function update(CompanyPresentation $presentation){
+    public function update(Request $request){
+        
+        
+        $company=CompanyPresentation::Find($request->id);
+        
+        $company->company_name = $request->company_name;
+        $company->company_description = $request->company_description;
+        $company->company_services = $request->company_services;
+        $company->company_management_team = $request->company_management_team;
+        $company->company_address = $request->company_address;
+        $company->company_contact = $request->company_contact;
+        
+        $company->save();
+        
+        //dd($company);
+        //return $company;
+        $message='Modificarile au fost salvate!';
+        return view('company.Presentation',['presentation'=>$company,'message'=>$message ]);
+        
 
     }
 }

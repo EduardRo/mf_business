@@ -43,13 +43,27 @@
                                 Email: {{$company->company_email}}
                             </div>
                             <div class="box-border padding-2 md:box-content text-white font-extrabold bg-blue-300  px-2 py-2">
-                                Telefon: {{$company->phone}}
+                                Telefon: {{$company->company_phone}}
                             </div>
-                    
+
+                            <div class="form-group text-center">
+                                <a href="{{ url('/company/edit') }}" class="btn btn-xs btn-primary pull-right">Modifica Datele Companiei</a>
+                                
+                            </div>
+                            @isset($message)
+                           
+                            
+                            <h2 Style="background:rgb(93, 126, 141);color:rgb(255, 255, 255);padding:20px 0 20px 15px">{{$message}}</h2>
+                                
+                            @endisset
+
+                            
+                            
                     </div>
                         
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
