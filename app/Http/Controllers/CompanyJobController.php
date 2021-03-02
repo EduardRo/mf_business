@@ -6,6 +6,7 @@ use App\Models\CompanyJob;
 use Illuminate\Http\Request;
 use App\Http\Helpers\ClsCompany;
 use App\Http\Helpers\ClsJobs;
+use App\Http\Helpers\ClsPresentation;
 
 class CompanyJobController extends Controller
 {
@@ -108,7 +109,9 @@ class CompanyJobController extends Controller
      */
     public function update(Request $request, CompanyJob $companyJob)
     {
-        //
+        // modification
+        $companyJob = new ClsPresentation;
+        
     }
 
     /**
@@ -119,6 +122,6 @@ class CompanyJobController extends Controller
      */
     public function destroy(CompanyJob $companyJob)
     {
-        //
+        // mod
     }
 }
