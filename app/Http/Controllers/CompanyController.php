@@ -56,6 +56,7 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         // Save the data
+        // dd($request);
         $input = $request->all();
         Company::create($input);
         return redirect()->back();
@@ -88,7 +89,7 @@ class CompanyController extends Controller
         $userId = auth()->id();
         $company = $customCompany->retrieveCompanyId($userId);
         //return $company;
-        return view('company.editCompany', ['company'=>$company]);
+        return view('company.editCompany', ['company' => $company]);
     }
 
     /**
@@ -100,9 +101,9 @@ class CompanyController extends Controller
      */
     public function update(Request $request)
     {
-        
-        $company=Company::Find($request->id);
-        
+
+        $company = Company::Find($request->id);
+
         $company->company_regcom = $request->company_regcom;
         $company->company_fiscalcode = $request->company_fiscalcode;
         $company->company_city = $request->company_city;
@@ -113,15 +114,13 @@ class CompanyController extends Controller
         $company->company_bank = $request->company_bank;
         $company->company_bank_account = $request->company_bank_account;
         $company->save();
-        
-        
+
+
         $clsCompany = new ClsCompany();
         $userId = auth()->id();
         $company = $clsCompany->retrieveCompanyId($userId);
-        $message='Modificarile au fost salvate!';
-        return view('company.Company', ['company' => $company, 'message'=>$message]);
-        
-        
+        $message = 'Modificarile au fost salvate!';
+        return view('company.Company', ['company' => $company, 'message' => $message]);
     }
 
     /**
